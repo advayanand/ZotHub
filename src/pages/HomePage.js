@@ -1,17 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import LoginPage from './pages/LoginPage';
-import HomePage from './pages/HomePage';
-import UserPage from './pages/UserPage';
-import SignUpPage from './pages/SignUpPage';
-import { createBrowserRouter, RouterProvider, Routes, Route, Redirect } from 'react-router-dom';
-import Header from './component/Header';
-import SearchPage from './pages/SearchPage';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import EventCarousel from "../component/Carousel";
+import EventScrollView from "../component/EventScrollView";
 
+const slides = [
+    {
+      id: 1,
+      image: '',
+      caption: 'Slide 1'
+    },
+    {
+      id: 2,
+      image: '',
+      caption: 'Slide 2'
+    },
+    {
+      id: 3,
+      image: '',
+      caption: 'Slide 3'
+    },
+];
 
-
-const imageUrl = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
-const events = [
+const items = [
     {
       id: 1,
       eventName: 'Music Festival',
@@ -93,61 +103,26 @@ const events = [
       date: '2023-03-15'
     }
   ];
+  
 
-const clubs = [
-    {
-      id: 1,
-      name: "Photography Club",
-      description: "A club for photography enthusiasts to share their passion and improve their skills.",
-      email: "photoclub@gmail.com",
-      school: "University of California, Los Angeles"
-    },
-    {
-      id: 2,
-      name: "Chess Club",
-      description: "A club for chess players to come together, play and improve their game.",
-      email: "chessclub@gmail.com",
-      school: "Stanford University"
-    },
-    {
-      id: 3,
-      name: "Book Club",
-      description: "A club for book lovers to read and discuss their favorite books.",
-      email: "bookclub@gmail.com",
-      school: "Harvard University"
-    }
-  ];
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    path: '/login',
-    element: <LoginPage />
-  },
-  {
-    path: '/signup',
-    element: <SignUpPage />
-  },
-  {
-    path: '/user',
-    element: <UserPage clubs={clubs} events={events} profileImgUrl={imageUrl} username="Peter Anteater"  />
-  },
-  {
-    path: '/search',
-    element: <SearchPage />
-  }
-]);
+const HomePage = (props) => {
+    return (
+        <Container>
+            <Row>
+                <EventCarousel slides={slides}/>
+            </Row>
+            <h1>Upcoming Events</h1>
+            <Row>
+                <EventScrollView items={items} />
+            </Row>
+            <h1>For You</h1>
+            <Row>
+                <EventScrollView items={items} />
+            </Row>
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <RouterProvider router={router}  />
-    </div>
-  );
+        </Container>
+    );
 }
 
-export default App;
+export default HomePage;
