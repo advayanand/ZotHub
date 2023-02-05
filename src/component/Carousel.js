@@ -14,7 +14,7 @@ const EventCarousel = (props) => {
       {slides.map((slide) => (
         <Carousel.Item key={slide.id}>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={slide.imgurl}
             //src="holder.js/800x400?text=Second slide&bg=282c34"
             //src ="holder.js/800x400?text=First slide&bg=373940"

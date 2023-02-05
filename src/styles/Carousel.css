@@ -4,6 +4,11 @@
     margin: auto;
   }
 
+
+.carousel-img{
+    opacity: 0.5;
+}
+
 .carousel-caption{
     margin: auto;
 }
