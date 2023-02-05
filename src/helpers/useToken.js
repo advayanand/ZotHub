@@ -4,8 +4,8 @@ export default function useToken() {
     const getToken = () => {
         const idString = sessionStorage.getItem('token');
         let auth_user_id = undefined;
-        if (!idString) {
-            let auth_user_id = JSON.parse(idString);
+        if (idString) {
+            auth_user_id = JSON.parse(idString);
         }
         return auth_user_id;
     }
@@ -14,8 +14,8 @@ export default function useToken() {
 
     const saveToken = userToken => {
         console.log(userToken);
-        // sessionStorage.setItem('token', JSON.stringify(userToken));
-        sessionStorage.setItem('token', userToken);
+        sessionStorage.setItem('token', JSON.stringify(userToken));
+        // sessionStorage.setItem('token', userToken);
         setToken(userToken);
     }
 
