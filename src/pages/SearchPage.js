@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { MDBCol, MDBIcon } from "mdbreact";
+import { Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import '../styles/SearchPage.css'
+import trend from '../img/trend.png';
 
 const Example = (props) => {
     const [outline, setOutline] = useState(false);
@@ -29,7 +31,7 @@ const Tags = () => {
 
         <Row justify-content-center>
                 <Col className ="d-flex align-items-start text-button" md={{ span: 2 }} >
-                    <Example text="Volunttering"></Example>
+                    <Example text="Volunteering"></Example>
                 </Col>
                 <Col className ="d-flex text-button" md={{ span: 2 }}>
                     <Example text="Sports"></Example>  
@@ -49,6 +51,9 @@ const Tags = () => {
                 <Col className ="d-flex text-button" md={{ span: 2}}>
                     <Example text="Academic"></Example>  
                 </Col>
+                <Col className ="d-flex text-button" md={{ span: 2}}>
+                    <Example text="Professional"></Example>  
+                </Col>
         </Row>
 
     
@@ -60,10 +65,9 @@ const TrendingSearch = () => {
     return (
         <Container className="trendingSearch">
             <Row><h3 className="mini-heading">Recent and trending searches</h3></Row>
-            <Row><a className="mini-text">Extracurricular activities</a></Row>
-            <Row><a className="mini-text">Student Council</a></Row>
-            <Row><a className="mini-text">Music production club</a></Row>
-            <Row><a className="mini-text">Hackathon in Janurary</a></Row>
+            <Row className="align-items-center"><Image src={trend} className="icon-img"  roundedCircle/><a className="mini-text">Extracurricular activities</a></Row>
+            <Row className="align-items-center"><Image src={trend} className="icon-img"  roundedCircle/><a className="mini-text">Student Council</a></Row>
+            <Row className="align-items-center"><Image src={trend} className="icon-img"  roundedCircle/><a className="mini-text">Music production club</a></Row>
         </Container>
     );
 }
