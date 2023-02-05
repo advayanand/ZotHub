@@ -4,9 +4,11 @@ import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import UserPage from './pages/UserPage';
 import SignUpPage from './pages/SignUpPage';
+import ClubPage from './pages/ClubPage';
 import { createBrowserRouter, RouterProvider, Routes, Route, Redirect } from 'react-router-dom';
 import Header from './component/Header';
 import SearchPage from './pages/SearchPage';
+import RecommendationPage from './pages/RecommendationPage';
 import useToken from './helpers/useToken';
 import { useState } from 'react';
 
@@ -145,6 +147,14 @@ function App() {
     {
       path: '/search',
       element: <SearchPage />
+    },
+    {
+      path: '/:school/club/:club_id',
+      element: <ClubPage />
+    },
+    {
+      path: '/recommendations',
+      element: <RecommendationPage />
     }
   ]);
 
