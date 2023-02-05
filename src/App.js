@@ -7,7 +7,8 @@ import SignUpPage from './pages/SignUpPage';
 import { createBrowserRouter, RouterProvider, Routes, Route, Redirect } from 'react-router-dom';
 import Header from './component/Header';
 import SearchPage from './pages/SearchPage';
-
+import useToken from './helpers/useToken';
+import { useState } from 'react';
 
 
 const imageUrl = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
@@ -118,34 +119,40 @@ const clubs = [
     }
   ];
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    path: '/login',
-    element: <LoginPage />
-  },
-  {
-    path: '/signup',
-    element: <SignUpPage />
-  },
-  {
-    path: '/user',
-    element: <UserPage clubs={clubs} events={events} profileImgUrl={imageUrl} username="Peter Anteater"  />
-  },
-  {
-    path: '/search',
-    element: <SearchPage />
-  }
-]);
+
 
 function App() {
+  const [ user, setUser ] = useState({});
+  const { token, setToken } = useToken();
+
+  const router = createBrowserRouter([
+    {
+      path: '/login',
+      element: <LoginPage setToken={setToken} />
+    },
+    {
+      path: '/signup',
+      element: <SignUpPage setToken={setToken} />
+    },
+    {
+      path: '/home',
+      element: <HomePage />
+    },
+    {
+      path: '/user',
+      element: <UserPage clubs={clubs} events={events} profileImgUrl={imageUrl} username="Peter Anteater" />
+    },
+    {
+      path: '/search',
+      element: <SearchPage />
+    }
+  ]);
+
+
   return (
     <div className="App">
       <Header />
-      <RouterProvider router={router}  />
+      <RouterProvider router={router} />
     </div>
   );
 }
