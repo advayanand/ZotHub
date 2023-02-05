@@ -1,0 +1,25 @@
+.profile-sec{
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+.profile-img{
+    width: 230px;
+    height: 230px;
+    margin-left: 300px;
+}
+
+.profile-name{
+    margin-top: 70px;
+    margin-right: 300px;
+    font-size: 45px;
+}
+
+.userContent{
+    margin-bottom: 150px;
+}
+
+.userTabs{
+    margin-left: 200px;
+    margin-bottom: 20px;
+}

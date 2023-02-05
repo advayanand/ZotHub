@@ -5,7 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import EventCard from "../component/EventCard";
 import ClubCard from "../component/ClubCard";
-
+import { Image } from 'react-bootstrap';
+import "../styles/UserPage.css"
+import petr from '../img/petr.png';
 
   
 function mapToRowEvent(items, m) {
@@ -15,6 +17,7 @@ function mapToRowEvent(items, m) {
             <Row key={i}>
                 {items.slice(i, i + m).map((item, subIndex) => {
                     return (
+                      <Col key={subIndex} md={4}>
                         <EventCard 
                             key={item.id} 
                             eventName={item.eventName} 
@@ -22,6 +25,8 @@ function mapToRowEvent(items, m) {
                             clubName={item.clubName} 
                             location={item.location} 
                             date={item.date} />
+                      </Col>
+
                     );
                 })}
             </Row>
@@ -72,18 +77,18 @@ const UpcomingEvents = (props) => {
 const UserContent = (props) => {
   return (
     <Tabs
+      className="userTabs"
       defaultActiveKey="profile"
-      id="fill-tab-example"
-      className="mb-3"
+      // justify
       fill
     >
-      <Tab eventKey="home" title="Home">
+      <Tab eventKey="home" title="My Clubs">
         <MyClubs items={props.clubs} />
       </Tab>
-      <Tab eventKey="profile" title="Profile">
+      <Tab eventKey="profile" title="Upcoming Events">
         <UpcomingEvents items={props.events}/>
       </Tab>
-      <Tab eventKey="longer-tab" title="Loooonger Tab">
+      <Tab eventKey="longer-tab" title="My Calendar">
         <div>In Progress</div>
       </Tab>
     </Tabs>
@@ -92,20 +97,18 @@ const UserContent = (props) => {
 
 const UserPage = (props) => {
     return (
-        <Container>
-            <Row>
+        <Container className="userContent">
+            <Row className="profile-sec ">
               <Col>
-                <img href={props.profileImgUrl}></img>
+                {/* <img src={petr} class="rounded-circle"> */}
+                <Image src={petr} className="profile-img"  roundedCircle/>
               </Col>
               <Col>
-                <h1>{props.username}</h1>
+                <h1 className="profile-name">{props.username}</h1>
               </Col>
-
             </Row>
 
-            <Row>
                 <UserContent clubs={props.clubs} events={props.events}/>
-            </Row>
         </Container>
     )
 }
