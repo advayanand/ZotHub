@@ -24,7 +24,8 @@ function mapToRowEvent(items, m) {
                             eventInfo={item.eventInfo}
                             clubName={item.clubName} 
                             location={item.location} 
-                            date={item.date} />
+                            date={item.date}
+                            imgurl={item.imgurl} />
                       </Col>
 
                     );
@@ -48,7 +49,8 @@ function mapToRowClub(items, m) {
                             name={item.name} 
                             description={item.description}
                             email={item.email} 
-                            school={item.school}  />
+                            school={item.school}
+                            imgurl={item.imgurl}   />
                       </Col>
                     );
                 })}
