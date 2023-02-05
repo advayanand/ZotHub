@@ -1,5 +1,5 @@
 const config = {
-    SERVER_API_URL: 'http://localhost:5000/api/v1'
+    SERVER_API_URL: 'http://localhost:8000'
 }
 
 export default config;
