@@ -15,7 +15,7 @@ import {
 const EventScrollView = (props) => {
     return (
         // <div style={{ width: "100%", overflow: "auto", display: "flex" }}>
-    <div class="card-group card-group-scroll">
+    <div className="card-group card-group-scroll">
         {props.items.map(item => {
             return <EventCard 
                 imgurl={item.imgurl}
