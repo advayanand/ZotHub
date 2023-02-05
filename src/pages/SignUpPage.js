@@ -10,7 +10,7 @@ import {
     MDBIcon
   }
   from 'mdb-react-ui-kit';
-import './LoginPage.css';
+import '../styles/LoginPage.css';
 
 const SignUpComponent = (props) => {
     return (
