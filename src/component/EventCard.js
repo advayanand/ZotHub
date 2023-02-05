@@ -44,14 +44,14 @@ const EventCard = (props) => {
     //     <Button variant="primary">Go somewhere</Button>
     //   </Card.Body>
     // </Card>
-    <div class="card event-card">
-      <div class="card-body">
-        <img src={props.imgurl} class="card-img-top" alt="Hollywood Sign on The Hill" />
-        <h5 class="card-title">{props.eventName}</h5>
-        <p class="card-text">{props.clubName}</p>
-        <p class="card-text">{props.date}</p>
-        <p class="card-text">{props.location}</p>
-        <a href="#!" class="btn btn-primary" onClick={() => handleClick(props.location)}>Location</a>
+    <div className="card event-card">
+      <div className="card-body">
+        <img src={props.imgurl} className="card-img-top" alt="Hollywood Sign on The Hill" />
+        <h5 className="card-title">{props.eventName}</h5>
+        <p className="card-text">{props.clubName}</p>
+        <p className="card-text">{props.date}</p>
+        <p className="card-text">{props.location}</p>
+        <a href="#!" className="btn btn-primary" onClick={() => handleClick(props.location)}>Location</a>
       </div>
     </div>
   );

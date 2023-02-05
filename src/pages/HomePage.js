@@ -12,7 +12,7 @@ const HomePage = (props) => {
             <Row>
                 <EventCarousel slides={props.slides}/>
             </Row>
-            <h3 className>Upcoming Events</h3>
+            <h3>Upcoming Events</h3>
             <Row className="upcoming-events">
                 <EventScrollView items={props.items} />
             </Row>
