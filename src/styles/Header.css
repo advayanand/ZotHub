@@ -1,6 +1,10 @@
+body {
+    padding: 0;
+ }
 .navbar {
+    margin-top: 0px;
     padding-left: 5.5rem;
-
+    color: white;
 }
 
 .navbar-brand{

@@ -2,6 +2,10 @@ body {
     font-family: "Helvetica", Sans-Serif;
 }
 
+.icon-img{
+    width: 45px;
+}
+
 .search-box{
     margin-top: 60px;
     margin-bottom: 90px;
@@ -22,7 +26,10 @@ body {
 .mini-text{
     text-align: left;
     font-size:  20px;
+    margin-top: 20px;
+    padding: 0;
     margin-bottom: 25px;
+    width: 80%;
     color: black;
 }
 
