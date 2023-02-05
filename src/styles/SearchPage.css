@@ -4,6 +4,8 @@ body {
 
 .icon-img{
     width: 45px;
+    max-height: 20px;
+    margin-top: 15px;
 }
 
 .search-box{
