@@ -22,7 +22,7 @@ const ClubCard = (props) => {
     //   </Card.Body>
     // </Card>
     <div class="card club-card">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+      <img src={props.imgurl} class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
         <h5 class="card-title">{props.name}</h5>
         <p class="card-text">{props.description}</p>

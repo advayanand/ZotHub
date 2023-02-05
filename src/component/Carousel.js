@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import "../styles/Carousel.css"
 
 const EventCarousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -14,12 +15,15 @@ const EventCarousel = (props) => {
         <Carousel.Item key={slide.id}>
           <img
             className="d-block w-100"
-            src="{slide.image}"
+            src={slide.imgurl}
+            //src="holder.js/800x400?text=Second slide&bg=282c34"
             //src ="holder.js/800x400?text=First slide&bg=373940"
             alt={slide.caption}
           />
           <Carousel.Caption>
-            <h3>{slide.caption}</h3>
+            <h3>{slide.eventName}</h3>
+            <p>{slide.eventInfo}</p>
+            <p>Location: {slide.location}</p>
           </Carousel.Caption>
         </Carousel.Item>
       ))}

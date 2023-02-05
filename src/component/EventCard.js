@@ -18,6 +18,9 @@ const handleClick = (address) => {
   );
 };
 
+// const fetchImage =(location) =>{
+
+// }
 
 
 const EventCard = (props) => {
@@ -43,7 +46,7 @@ const EventCard = (props) => {
     // </Card>
     <div class="card event-card">
       <div class="card-body">
-        <img src="" class="card-img-top" alt="Hollywood Sign on The Hill" />
+        <img src={props.imgurl} class="card-img-top" alt="Hollywood Sign on The Hill" />
         <h5 class="card-title">{props.eventName}</h5>
         <p class="card-text">{props.clubName}</p>
         <p class="card-text">{props.date}</p>

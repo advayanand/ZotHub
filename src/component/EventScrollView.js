@@ -18,6 +18,7 @@ const EventScrollView = (props) => {
     <div class="card-group card-group-scroll">
         {props.items.map(item => {
             return <EventCard 
+                imgurl={item.imgurl}
                 key={item.id} 
                 eventName={item.eventName} 
                 eventInfo={item.eventInfo}
