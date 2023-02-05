@@ -10,7 +10,7 @@ import {
     MDBIcon
   }
   from 'mdb-react-ui-kit';
-import './LoginPage.css';
+import '../styles/LoginPage.css';
 import { Link, useNavigate } from "react-router-dom";
 import { signUpUser } from '../controllers/authController';
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import EventCarousel from "../component/Carousel";
 import EventScrollView from "../component/EventScrollView";
+import "../styles/HomePage.css"
 
 const slides = [
     {
@@ -112,12 +113,12 @@ const HomePage = (props) => {
             <Row>
                 <EventCarousel slides={slides}/>
             </Row>
-            <h1>Upcoming Events</h1>
-            <Row>
+            <h3 className>Upcoming Events</h3>
+            <Row className="upcoming-events">
                 <EventScrollView items={items} />
             </Row>
-            <h1>For You</h1>
-            <Row>
+            <h3>For You</h3>
+            <Row className="for-you">
                 <EventScrollView items={items} />
             </Row>
 
