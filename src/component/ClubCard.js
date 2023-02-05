@@ -21,15 +21,15 @@ const ClubCard = (props) => {
     //     <Button variant="primary">Go somewhere</Button>
     //   </Card.Body>
     // </Card>
-    <div class="card club-card">
-      <img src={props.imgurl} class="card-img-top" alt="Fissure in Sandstone"/>
-      <div class="card-body">
-        <h5 class="card-title">{props.name}</h5>
-        <p class="card-text">{props.description}</p>
-        <p class="card-text">{props.email}</p>
-        <p class="card-text">{props.school}</p>
+    <div className="card club-card">
+      <img src={props.imgurl} className="card-img-top" alt="Fissure in Sandstone"/>
+      <div className="card-body">
+        <h5 className="card-title">{props.name}</h5>
+        <p className="card-text">{props.description}</p>
+        <p className="card-text">{props.email}</p>
+        <p className="card-text">{props.school}</p>
 
-        <a href="#!" class="btn btn-primary">Button</a>
+        <a href="#!" className="btn btn-primary">Button</a>
       </div>
     </div>
   );
