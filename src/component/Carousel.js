@@ -16,14 +16,15 @@ const EventCarousel = (props) => {
           <img
             className="d-block w-100 carousel-img"
             src={slide.imgurl}
-            //src="holder.js/800x400?text=Second slide&bg=282c34"
+            //src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"
             //src ="holder.js/800x400?text=First slide&bg=373940"
             alt={slide.caption}
           />
           <Carousel.Caption>
-            <h3>{slide.eventName}</h3>
-            <p>{slide.eventInfo}</p>
-            <p>Location: {slide.location}</p>
+            <h3 className='carousel-heading'>{slide.eventName}</h3>
+            <p className='carousel-text'>{slide.eventInfo}</p>
+            <p className='carousel-text'>Hosted by: {slide.clubName}</p>
+            <p className='carousel-text'>Location: {slide.location}</p>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
