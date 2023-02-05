@@ -12,6 +12,12 @@ import {
 import "../styles/EventCard.css"
 
 
+const handleClick = (address) => {
+  window.open(
+    `https://www.google.com/maps/search/?api=1&query=${address}`
+  );
+};
+
 
 
 const EventCard = (props) => {
@@ -42,7 +48,7 @@ const EventCard = (props) => {
         <p class="card-text">{props.clubName}</p>
         <p class="card-text">{props.date}</p>
         <p class="card-text">{props.location}</p>
-        <a href="#!" class="btn btn-primary">Button</a>
+        <a href="#!" class="btn btn-primary" onClick={() => handleClick(props.location)}>Location</a>
       </div>
     </div>
   );
